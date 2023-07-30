@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+    <script src="https://kit.fontawesome.com/8b9cdc2059.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    
+    <script defer src="../static/js/JScript.js"></script>
+    <title>Prediction</title>
+   
+</head>
+<body>
+  <header id="head" class="header">
+    <section  id="navbar">
+            <h1 class="nav-heading"><i class="fas fa-leaf m2"></i>Tea Leaves Disease Detection System </h1>
+        <div class="nav--items">
+            <ul>
+             <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">LEAF</a></li>
+                <li><a href="prediction.html"><i class="fas fa-search"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    </header>
+    <!-- dataset/Training/metal/metal326.jpg -->
+    <section id="prediction">
+        <div class="prediction-input">
+        <div class="circle">
+            <img src="../static/img/dummy/leaf.jpg" alt="Demo" id="demo" class="circle">
+        </div>
+                <form id="form" action="/result" method="post"  enctype="multipart/form-data">
+                    <input type="file" id="imageupload"  name="image" accept="image/*" class="input-image">
+                    <input type="submit" class="submitbtn">
+                  </form>
+            </div>
+            <br>
+            <br>
+            <br>
+            <h3 class="title text-muted">
+            THE PREDICTION IS
+          </h3>
+        <!--  <div class="line"></div>
+              <div class="output-container">
+                  <div data-type="algal_leaf" class="output img1">
+                    <img src="../static/img/testimonials/algalleaf.jpg" alt="" class="circle">
+                    <h3 class="text-muted">ALGAL LEAF</h3>
+                </div>
+                  <div data-type="anthracnose" class="output img2">
+                    <img src="../static/img/testimonials/anthracnose.jpg" alt="" class="circle">
+                    <h3 class="text-muted">ANTHRACNOSE</h3>
+                </div>
+                  <div data-type="bird_eye" class="output img3">
+                    <img src="../static/img/testimonials/birdeye.jpg" alt="" class="circle">
+                    <h3 class="text-muted">BIRD EYE</h3>
+                </div>
+                  <div data-type="brown_blight" class="output img4">
+                    <img src="../static/img/testimonials/brownblight.jpg" alt="" class="circle">
+                    <h3 class="text-muted">BROWN BLIGHT</h3>
+                </div>
+                  <div data-type="healthy" class="output img5">
+                    <img src="../static/img/testimonials/healthy.jpg" alt="" class="circle">
+                    <h3 class="text-muted">HEALTHY</h3>
+                </div>
+                  <div data-type="red_leaf" class="output img6">
+                    <img src="../static/img/testimonials/redleaf.jpg" alt="" class="circle">
+                    <h3 class="text-muted">RED LEAF</h3>
+                </div>
+                <div data-type="white" class="output img7">
+                  <img src="../static/img/testimonials/white.jpg" alt="" class="circle">
+                  <h3 class="text-muted">WHITE</h3>
+              </div>
+              <div data-type="gray" class="output img8">
+                <img src="../static/img/testimonials/gray.jpg" alt="" class="circle">
+                <h3 class="text-muted">GRAY</h3>
+            </div>
+                 
+              </div>-->
+              
+             <div  class="hide" id="result">
+              {{prediction}}
+            </div>
+    </section>
+    <section id="footer">
+        <p>Copyright © 2023. All Rights Reserved</p>
+        <div class="social">
+          <a href="#"_blank"><i class="fab fa-2x fa-twitter-square"></i></a>
+           <a href="#" target="_blank">
+            <i class="fab fa-2x  fa-linkedin"></i></a>
+            <a href="#">
+                <i class="fab fa-instagram-square fa-2x "></i>
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>
